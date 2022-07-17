@@ -1,6 +1,6 @@
 -- 文件编码
-vim.g.encoding = "UTF-8"
-vim.o.fileencoding = "UTF-8"
+vim.g.encoding = "utf-8"
+vim.o.fileencodings = "utf-8"
 
 -- Tab键缩进
 vim.opt.expandtab = false
