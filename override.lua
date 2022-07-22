@@ -16,6 +16,11 @@ M.nvimtree = {
 			},
 		},
 	},
+
+	filters = {
+		dotfiles = true,
+		custom = { "build" },
+	},
 }
 
 M.treesitter = {
@@ -46,5 +51,10 @@ M.nvimcmp = {
 	 },
 }
 
+M.telescope = {
+	defaults = {
+		file_ignore_patterns = { "examples" },
+	},
+}
 
 return M
