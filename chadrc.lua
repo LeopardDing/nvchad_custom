@@ -11,8 +11,8 @@ M.options = {
 }
 
 M.ui = {
-	theme = "everforest",
-	transparency = false,
+	theme = "chadracula",
+	transparency = true,
 }
 
 M.plugins = {
@@ -26,6 +26,7 @@ M.plugins = {
 	override = {
 		["kyazdani42/nvim-tree.lua"] = override.nvimtree,
 		["nvim-treesitter/nvim-treesitter"] = override.treesitter,
+		["hrsh7th/nvim-cmp"] = override.nvimcmp,
 	}
 }
 
