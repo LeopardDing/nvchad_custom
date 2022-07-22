@@ -47,7 +47,7 @@ M.nvimcmp = {
 		-- { name = "luasnip" },
 		-- { name = "buffer" },
 		-- { name = "nvim_lua" },
-		-- { name = "path" },
+		{ name = "path" },
 	 },
 }
 
