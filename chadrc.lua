@@ -28,7 +28,9 @@ M.plugins = {
 		["nvim-treesitter/nvim-treesitter"] = override.treesitter,
 		["hrsh7th/nvim-cmp"] = override.nvimcmp,
 		["nvim-telescope/telescope.nvim"] = override.telescope,
-	}
+	},
+
+	user = require("custom.plugins"),
 }
 
 M.mappings = require("custom.mappings")
