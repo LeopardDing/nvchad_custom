@@ -1,29 +1,29 @@
 local M = {}
 
 M.general = {
-	-- 退出编辑器
 	n = {
+		-- 退出编辑器
 		["<A-q>"] = { "<cmd> qa! <CR>", "exit neovim editor" },
 	},
 }
 
 M.lspconfig = {
-	-- clangd源码头文件切换
 	n = {
+		-- clangd源码头文件切换
 		["<A-o>"] = { "<cmd> ClangdSwitchSourceHeader <CR>", "switch source and header" },
 	}
 }
 
 M.telescope = {
-	-- 查找全局函数符号
 	n = {
+		-- 查找全局函数符号
 		["<leader>fs"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", "   find global symbols" },
 	},
 }
 
 M.neogen = {
-	-- 添加函数注释
 	n = {
+		-- 添加函数注释
 		["<leader>cf"] = { "<cmd> :lua require('neogen').generate() <CR>", "   create function comment" },
 	}
 }
