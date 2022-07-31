@@ -7,6 +7,13 @@ M.general = {
 	},
 }
 
+M.lspconfig = {
+	-- clangd源码头文件切换
+	n = {
+		["<A-o>"] = { "<cmd> ClangdSwitchSourceHeader <CR>", "switch source and header" },
+	}
+}
+
 M.telescope = {
 	-- 查找全局函数符号
 	n = {

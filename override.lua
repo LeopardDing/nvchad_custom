@@ -8,15 +8,6 @@ M.nvimtree = {
 		enable = false,
 	},
 
-	render = {
-		highlight_git = false,
-		icons = {
-			show = {
-				git = false,
-			},
-		},
-	},
-
 	filters = {
 		dotfiles = true,
 		custom = { "build" },
@@ -53,7 +44,7 @@ M.nvimcmp = {
 
 M.telescope = {
 	defaults = {
-		file_ignore_patterns = { "examples" },
+		file_ignore_patterns = { "build" },
 	},
 }
 

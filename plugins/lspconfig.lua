@@ -1,33 +1,18 @@
-local M = {}
+local lspconfig = require("lspconfig")
+local on_attach = require("plugins.configs.lspconfig").on_attach
+local capabilities = require("plugins.configs.lspconfig").capabilities
 
-M.setup_lsp = function(attach, capabilities)
-
-	local lspconfig = require("lspconfig")
-	-- local servers = { "clangd" }
-
-	-- for _, lsp in ipairs(servers) do
-	-- 	lspconfig[lsp].setup {
-	-- 		on_attach = attach,
-	-- 		capabilities = capabilities,
-	-- 		root_dir = vim.loop.cwd,
-	-- 	}
-	-- end
-
-	-- clangd
-	lspconfig.clangd.setup {
-		on_attach = attach,
-		capabilities = capabilities,
-		root_dir = vim.loop.cwd,
-		filetypes = { "c", "cpp" },
-		cmd = {
-			"clangd",
-			"-j=8",
-			"--compile-commands-dir=build",
-			"--header-insertion=never",
-			"--clang-tidy",
-		}
+-- clangd配置
+lspconfig.clangd.setup {
+	on_attach = on_attach,
+	capabilities = capabilities,
+	root_dir = vim.loop.cwd,
+	filetypes = { "c", "cpp" },
+	cmd = {
+		"clangd",
+		"-j=8",
+		"--compile-commands-dir=build",
+		"--header-insertion=never",
+		"--clang-tidy",
 	}
-
-end
-
-return M
+}
